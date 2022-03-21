@@ -89,3 +89,17 @@ $ export EXECUTABLE_ROOT=/absolute/path/to/binary/executable/directory
 $ ./run_all.sh motivation 4
 ```
 After the execution in the _SOURCE\_CODE\_ROOT_ directory there have been produced several .out files. The _pareto\_combinations.txt_ file indicates all the ID alternatives for the pareto optimal solutions, aiming to minimize the number of memory footprint and the number of memory accesses. For all the alternative solutions, it exists a _log\_ID.out_ file, which indicates more in detail the data structure implementations utilized for the corresponding solution. Finally, _pareto.pdf_ illustrates the pareto line of the design space exploration.
+
+## Energy Consumption Monitoring
+
+More details about how to monitor energy consumption can be found on [our](https://github.com/mkatsa/PENVMTool#energy-consumption-monitoring) github repository.
+
+
+# License
+
+This work was conducted in [Microprocessors and Digital Systems Laboratory(MicroLAB)](https://microlab.ntua.gr/) of Electrical and Computer Engineering School in the National and Technical University of Athens(NTUA). Scripts and code implemented by our group utilize [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0) and are publicly available. For more information please refer to the [LICENSE](https://github.com/mkatsa/DDTR-DRAM-NVM/blob/main/LICENSE) file of our repository.
+
+
+# Contact
+
+For more information and/or questions on this work you can create an issue or contact us at mkatsaragakis@microlab.ntua.gr lpapadop@microlab.ntua.gr christosbaloukas@microlab.ntua.gr
