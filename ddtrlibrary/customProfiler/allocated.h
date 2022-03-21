@@ -20,7 +20,7 @@
 #include <memkind.h>
 #include <limits.h>
 #define PMEM_MAX_SIZE (102410241024)
-static char path[PATH_MAX]="/tmp/"; 
+static char path[PATH_MAX]="/mnt/pmem1"; 
 static struct memkind *pmem_kind=NULL;
 #endif
 
