@@ -1,6 +1,6 @@
-#include "definitions.h"
+#include "../ddtrlibrary/definitions.h"
 //#include "myddtType.h"
-#include "config.h"
+#include "../ddtrlibrary/config.h"
 #include <iostream>
 #include <random>
 
@@ -22,7 +22,9 @@ typedef int myddtEncType;
 
 int main()
 {	
+
 	Tracing::DDTRLogger::getInstance()->setLogFileName(LOGFILENAME);
+
 
 	myddtType0 myddt0;
     myddtType1 myddt1;
@@ -74,20 +76,11 @@ int main()
         int random_index = distribution(generator);  // generates number in the range 0..MAX_ELEMENTS-1
 
         myddt1[random_index];
-        
-        //calculate loop completion percentage
-        int percentage = (int) (100*(i+1)/NUM_LOOPS);
-        if ( currentPercentage < percentage )
-        {
-            currentPercentage = percentage;
-        }
+       
     }
 
-
-    /*for (int y = 0; y < MAX_ELEMENTS_BIG/2; y++)
-	{
-		myddt1.pop_back();
-	}*/
+    int x=500;
+    auto it = myddt1.insert(myddt1.begin()+x, 5000)
 
 
 	currentPercentage = 0;
@@ -98,13 +91,6 @@ int main()
         int random_index = distribution(generator);  // generates number in the range 0..MAX_ELEMENTS-1
 
         myddt3[random_index];
-        
-        //calculate loop completion percentage
-        int percentage = (int) (100*(i+1)/NUM_LOOPS_BIG);
-        if ( currentPercentage < percentage )
-        {
-            currentPercentage = percentage;
-        }
     }
 
     //cout << "5" << endl;

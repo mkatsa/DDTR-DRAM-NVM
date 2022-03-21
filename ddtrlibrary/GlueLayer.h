@@ -487,7 +487,7 @@ namespace DDTLibrary {
 		size_type count;
 		std::vector<size_type> countState;
 		const unsigned int instance_id;
-		friend class GlueLayer;
+		//friend class GlueLayer;
 	};
 
 }

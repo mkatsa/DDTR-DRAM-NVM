@@ -42,8 +42,8 @@ public:
     }
     
     ~compositeObject() {
-        std::cout << "compositeObject destructed" << std::endl;
-        std::cout << "destructor compositeObject call*ed" << std::endl;
+        //std::cout << "compositeObject destructed" << std::endl;
+        //std::cout << "destructor compositeObject call*ed" << std::endl;
     }
     
     /*

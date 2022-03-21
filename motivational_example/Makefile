@@ -9,15 +9,13 @@ CXX=g++
 #Inputs and Targets
 INPUT=motivational_example.cpp
 TARGET=motivation
-INPUT2=motivational2_example.cpp
-TARGET2=motivation2
+
 #=====================================================================================================
 
 
 #=====================================================================================================
 #Compilation Flags
 CXXFLAGS=-g -shared-libgcc -o
-DDTRFLAGS=-I./ddtrlibrary
 QUARTZFLAGS=-I/NVMemul/quartz/src/lib/ -L/NVMemul/quartz/build/src/lib/ -lnvmemul -DDDTR_QUARTZ
 NOLOGGING=-DNOLOGGING
 OPTANEFLAGS=-lmemkind -DOPTANE
@@ -40,7 +38,7 @@ help :
 	@echo "quartz	: ENABLE | DISABLE(DEFAULT)"
 	@echo "optane   : ENABLE | DISABLE(DEFAULT)"
 
-all: motivation motivation2 script 
+all: motivation motivation2 
 
 motivation:
 ifeq ($(emulator),ENABLE)
@@ -52,39 +50,29 @@ ifeq ($(log),ENABLE)
 	$(info logging ENABLED)
 ifeq ($(emulator),ENABLE)
 	$(info emulator ENABLED)
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(QUARTZFLAGS) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(QUARTZFLAGS) $(CXXFLAGS) $(TARGET)
 else
 ifeq ($(optane),ENABLE)
 	$(info optane ENABLED)
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(OPTANEFLAGS) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(OPTANEFLAGS) $(CXXFLAGS) $(TARGET)
 else
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(CXXFLAGS) $(TARGET)
 endif
 endif
 else
 ifeq ($(emulator),ENABLE)
 	$(info emulator ENABLED)
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(NOLOGGING) $(QUARTZFLAGS) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(NOLOGGING) $(QUARTZFLAGS) $(CXXFLAGS) $(TARGET)
 else
 ifeq ($(optane),ENABLE)
 	$(info optane ENABLED)
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(NOLOGGING) $(OPTANEFLAGS) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(NOLOGGING) $(OPTANEFLAGS) $(CXXFLAGS) $(TARGET)
 else
-	$(CXX) $(INPUT) $(DDTRFLAGS) $(NOLOGGING) $(CXXFLAGS) $(TARGET)
+	$(CXX) $(INPUT) $(NOLOGGING) $(CXXFLAGS) $(TARGET)
 endif
 endif
 endif
 
-
-
-
-
-script: script.o
-	$(CXX) script.o -o script
-
-script.o: script.cpp
-	$(CXX) -c script.cpp
-	
 clean:
 	rm -f *.o motivation
 
