@@ -51,13 +51,9 @@ echo ${FRAMEWORK_ROOT}
 # Run DDTR and find Pareto Optimal Solutions
 cd ./scripts
 
-echo $PWD
-#=================
-#change this
-
-
 echo "Executing Design Space Exploration for DDTR"
 ./fast_ddtr.sh ${executable##*/} $ddts 1 0  #LOGGING #NATIVE
+
 
 	
 python fast_pareto_ddtr.py $ddts ${SOURCE_CODE_ROOT}
@@ -65,7 +61,9 @@ python fast_pareto_ddtr.py $ddts ${SOURCE_CODE_ROOT}
 
 ./run_all_combinations.sh ${executable##*/} 1 #LOGGING ENABLED
 ./run_combination.sh ${executable} 0 1 0
-wait
-./${executable}
-wait
+
+
+cp ${EXECUTABLE_ROOT}/log_* ${FRAMEWORK_ROOT}/logs
+cp ${EXECUTABLE_ROOT}/pareto_* ${FRAMEWORK_ROOT}/logs
+
 #========================================================================================================

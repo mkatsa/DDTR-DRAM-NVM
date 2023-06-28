@@ -84,8 +84,8 @@ Our library is also built to map all the dynamic memory allocations to Intel Opt
 We provide an example for providing DDTR exploration over the motivational example. However this can be applied to any application that DDTR has been integrated on.
 ```
 $ cd scripts
-$ export SOURCE_CODE_ROOT=/absolute/path/to/source/code/root/directory
-$ export EXECUTABLE_ROOT=/absolute/path/to/binary/executable/directory
+$ export SOURCE_CODE_ROOT=/absolute/path/to/motivational_example
+$ export EXECUTABLE_ROOT=/absolute/path/to/motivational_example
 $ ./run_all.sh motivation 4
 ```
 After the execution in the _SOURCE\_CODE\_ROOT_ directory there have been produced several .out files. The _pareto\_combinations.txt_ file indicates all the ID alternatives for the pareto optimal solutions, aiming to minimize the number of memory footprint and the number of memory accesses. For all the alternative solutions, it exists a _log\_ID.out_ file, which indicates more in detail the data structure implementations utilized for the corresponding solution. Finally, _pareto.pdf_ illustrates the pareto line of the design space exploration.
