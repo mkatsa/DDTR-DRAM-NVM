@@ -65,7 +65,7 @@ python fast_pareto_ddtr.py $ddts ${SOURCE_CODE_ROOT}
 
 
 cp ${EXECUTABLE_ROOT}/log_* ${FRAMEWORK_ROOT}/logs
-cp ${EXECUTABLE_ROOT}/pareto_* ${FRAMEWORK_ROOT}/logs
+cp ${EXECUTABLE_ROOT}/pareto* ${FRAMEWORK_ROOT}/logs
 rm ${EXECUTABLE_ROOT}/log_*
-rm ${EXECUTABLE_ROOT}/pareto_*
+rm ${EXECUTABLE_ROOT}/pareto*
 #========================================================================================================

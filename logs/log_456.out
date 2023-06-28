@@ -1,6 +1,6 @@
-totalReads = 6389
-totalWrites = 2064
-totalAccesses = 8453
+totalReads = 6088
+totalWrites = 1948
+totalAccesses = 8036
 totalMaxMemory = 1405664
 
 STATS PER DDT
@@ -31,8 +31,8 @@ max memory = 401616
 
 id = 3
 {
-reads = 3066
-writes = 930
-total accesses = 3996
+reads = 2765
+writes = 814
+total accesses = 3579
 max memory = 401616
 }
