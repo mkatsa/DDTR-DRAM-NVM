@@ -1,0 +1,38 @@
+totalReads = 6965
+totalWrites = 1908
+totalAccesses = 8873
+totalMaxMemory = 1405664
+
+STATS PER DDT
+
+id = 0
+{
+reads = 616
+writes = 412
+total accesses = 1028
+max memory = 401616
+}
+
+id = 1
+{
+reads = 2957
+writes = 212
+total accesses = 3169
+max memory = 200816
+}
+
+id = 2
+{
+reads = 616
+writes = 412
+total accesses = 1028
+max memory = 401616
+}
+
+id = 3
+{
+reads = 2776
+writes = 872
+total accesses = 3648
+max memory = 401616
+}
